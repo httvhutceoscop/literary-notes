@@ -142,6 +142,10 @@ function randomize() {
   $('.quote-author').html(item.author);
 }
 
+function autoNext() {
+	setInterval(randomize, 3000);
+}
+
 function getQuote() {
   var $button = $('.next')
 
@@ -151,4 +155,5 @@ function getQuote() {
 $(document).ready(function() {
   randomize();
   getQuote();
+	autoNext();
 });
